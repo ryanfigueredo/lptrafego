@@ -1,5 +1,11 @@
 "use client";
 
+declare global {
+  interface Window {
+    fbq?: (...args: any[]) => void;
+  }
+}
+
 import { motion } from "framer-motion";
 import Link from "next/link";
 
