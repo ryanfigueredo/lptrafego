@@ -22,8 +22,19 @@ export default function Partners() {
         transition={{ duration: 0.6 }}
         className="text-3xl md:text-4xl font-bold text-[#3A5311]"
       >
-        Parceiros que confiam na KL Facilities
+        Empresas que confiam na KL Facilities
       </motion.h2>
+
+      <motion.p
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.6, delay: 0.2 }}
+        className="mt-4 text-lg md:text-xl text-gray-700"
+      >
+        Com mais de +60 contratos ativos em 5 estados do Brasil, atendemos desde
+        redes de academias a centros logísticos e grupos educacionais.
+      </motion.p>
 
       <div className="mt-10 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 max-w-5xl mx-auto items-center">
         {partners.map((logo, i) => (

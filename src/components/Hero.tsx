@@ -13,7 +13,8 @@ export default function Hero() {
           transition={{ duration: 0.7 }}
           className="text-4xl md:text-5xl font-extrabold text-[#3A5311]"
         >
-          Seu condomínio merece mais do que “faxina”.
+          Soluções Profissionais em Limpeza, Facilities e Apoio Operacional para
+          sua Empresa.
         </motion.h1>
 
         <motion.p
@@ -22,9 +23,9 @@ export default function Hero() {
           transition={{ duration: 0.7, delay: 0.3 }}
           className="mt-6 text-lg md:text-xl text-gray-700"
         >
-          Reduza custos e ganhe eficiência com serviços profissionais de
-          limpeza, apoio operacional e manutenção. A KL Facilities cuida de tudo
-          para você.
+          Atuamos com excelência em academias, escolas, centros comerciais,
+          escritórios e condomínios. Reduza custos, aumente a produtividade e
+          mantenha seu ambiente impecável com a KL Facilities.
         </motion.p>
 
         <motion.div
@@ -37,7 +38,7 @@ export default function Hero() {
             href="#contato"
             className="bg-[#3A5311] text-white px-6 py-3 rounded-xl font-medium hover:bg-[#2c3d0d] transition"
           >
-            Solicitar orçamento
+            Solicite uma Proposta
           </Link>
           <Link
             href="https://wa.me/5541984022907"
