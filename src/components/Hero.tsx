@@ -40,13 +40,21 @@ export default function Hero() {
           >
             Solicite uma Proposta
           </Link>
-          <Link
+          <a
             href="https://wa.me/5541984022907"
             target="_blank"
+            onClick={() => {
+              if (
+                typeof window !== "undefined" &&
+                typeof window.fbq === "function"
+              ) {
+                window.fbq("track", "Contact");
+              }
+            }}
             className="border border-[#3A5311] text-[#3A5311] px-6 py-3 rounded-xl font-medium hover:bg-[#e4ead8] transition"
           >
             Falar no WhatsApp
-          </Link>
+          </a>
         </motion.div>
       </div>
     </section>
