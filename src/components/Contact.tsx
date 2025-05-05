@@ -36,6 +36,7 @@ export default function Contact() {
         toast.error("Erro ao enviar o contato.");
       }
     } catch (err) {
+      console.error("Erro ao enviar o formulário:", err);
       toast.error("Erro de conexão. Tente novamente.");
     } finally {
       setLoading(false);
