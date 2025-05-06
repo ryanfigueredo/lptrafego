@@ -25,7 +25,6 @@ export default function Footer() {
               alt="KL Facilities"
               width={150}
               height={40}
-              priority
             />
           </Link>
           <div className="flex gap-4 text-[#3A5311]">

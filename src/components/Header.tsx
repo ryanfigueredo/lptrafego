@@ -22,7 +22,6 @@ export function Header() {
             alt="KL Facilities"
             width={140}
             height={40}
-            priority
           />
         </Link>
 

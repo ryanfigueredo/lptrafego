@@ -31,8 +31,8 @@ export default function Hero() {
           transition={{ duration: 0.7, delay: 0.3 }}
           className="mt-6 text-lg md:text-xl text-gray-700"
         >
-          Mais de 60 contratos ativos. Atendimento em academias, atacadistas e
-          centros comerciais em todo o Brasil.
+          Mais de 60 contratos ativos. Atendimento em atacadistas e centros
+          comerciais em todo o Brasil.
         </motion.p>
 
         <motion.div
@@ -79,6 +79,7 @@ export default function Hero() {
             muted={true}
             controls={true}
             style={{ objectFit: "cover" }}
+            playsinline
             config={{
               file: {
                 attributes: {
