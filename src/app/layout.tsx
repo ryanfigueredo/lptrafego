@@ -3,6 +3,8 @@ import "@/styles/globals.css";
 import Script from "next/script";
 import { Toaster } from "sonner";
 import { figtree, outfit } from "@/lib/fonts";
+import { Header } from "@/components/Header";
+import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
   title: "KL Facilities",
@@ -61,7 +63,9 @@ export default function RootLayout({
         />
       </head>
       <body className="font-sans">
+        <Header />
         {children}
+        <Footer />
         <Toaster richColors />
 
         {/* Meta Pixel noscript */}
