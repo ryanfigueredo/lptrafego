@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Image from "next/image";
 import { useState } from "react";
 import { toast } from "sonner";
 
@@ -64,10 +65,12 @@ export default function ContatoPage() {
 
           <div className="mt-10 rounded-xl overflow-hidden shadow-lg">
             {/* Substituir por mapa 3D se quiser */}
-            <img
+            <Image
               src="/brasil-map.png"
               alt="Mapa do Brasil"
               className="w-full h-auto object-cover"
+              width={600}
+              height={400}
             />
           </div>
         </motion.div>

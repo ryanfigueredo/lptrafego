@@ -2,8 +2,12 @@
 
 declare global {
   interface Window {
-    fbq?: (...args: any[]) => void;
-    gtag?: (...args: any[]) => void;
+    fbq?: (command: string, event: string, ...args: unknown[]) => void;
+    gtag?: (
+      command: string,
+      eventName: string,
+      params?: Record<string, unknown>
+    ) => void;
   }
 }
 

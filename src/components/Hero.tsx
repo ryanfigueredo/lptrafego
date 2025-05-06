@@ -2,7 +2,7 @@
 
 declare global {
   interface Window {
-    fbq?: (...args: any[]) => void;
+    fbq?: (command: string, event: string, ...args: unknown[]) => void;
   }
 }
 
@@ -75,9 +75,9 @@ export default function Hero() {
             url="/videos/institucional-kl.mp4"
             width="100%"
             height="100%"
-            playing={false}
-            muted
-            controls
+            playing={true}
+            muted={true}
+            controls={true}
             style={{ objectFit: "cover" }}
             config={{
               file: {
@@ -85,7 +85,7 @@ export default function Hero() {
                   style: {
                     width: "100%",
                     height: "100%",
-                    objectFit: "cover", // 🔥 ESSENCIAL PARA REMOVER AS FAIXAS PRETAS
+                    objectFit: "cover",
                   },
                 },
               },
