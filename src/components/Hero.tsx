@@ -2,25 +2,27 @@
 
 declare global {
   interface Window {
-    fbq?: (command: string, event: string, ...args: unknown[]) => void;
+    fbq?: (...args: any[]) => void;
   }
 }
 
 import { motion } from "framer-motion";
 import Link from "next/link";
+import dynamic from "next/dynamic";
+
+const ReactPlayer = dynamic(() => import("react-player/lazy"), { ssr: false });
 
 export default function Hero() {
   return (
-    <section className="min-h-[80vh] flex items-center justify-center bg-[#f5f8ef] px-6 text-center">
-      <div className="max-w-3xl">
+    <section className="bg-[#f5f8ef] px-6 py-16 md:py-24 text-center">
+      <div className="max-w-5xl mx-auto">
         <motion.h1
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7 }}
-          className="text-4xl md:text-5xl font-extrabold text-[#3A5311]"
+          className="text-4xl md:text-5xl font-extrabold text-[#3A5311] leading-tight"
         >
-          Soluções Profissionais em Limpeza, Facilities e Apoio Operacional para
-          sua Empresa.
+          Excelência em Limpeza Profissional e Facilities Operacionais
         </motion.h1>
 
         <motion.p
@@ -29,9 +31,8 @@ export default function Hero() {
           transition={{ duration: 0.7, delay: 0.3 }}
           className="mt-6 text-lg md:text-xl text-gray-700"
         >
-          Atuamos com excelência em academias, escolas, centros comerciais,
-          escritórios e condomínios. Reduza custos, aumente a produtividade e
-          mantenha seu ambiente impecável com a KL Facilities.
+          Mais de 60 contratos ativos. Atendimento em academias, atacadistas e
+          centros comerciais em todo o Brasil.
         </motion.p>
 
         <motion.div
@@ -61,6 +62,35 @@ export default function Hero() {
           >
             Falar no WhatsApp
           </a>
+        </motion.div>
+
+        {/* Player do vídeo institucional */}
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.8, delay: 0.7 }}
+          className="mt-10 aspect-video rounded-xl overflow-hidden shadow-lg"
+        >
+          <ReactPlayer
+            url="/videos/institucional-kl.mp4"
+            width="100%"
+            height="100%"
+            playing={false}
+            muted
+            controls
+            style={{ objectFit: "cover" }}
+            config={{
+              file: {
+                attributes: {
+                  style: {
+                    width: "100%",
+                    height: "100%",
+                    objectFit: "cover", // 🔥 ESSENCIAL PARA REMOVER AS FAIXAS PRETAS
+                  },
+                },
+              },
+            }}
+          />
         </motion.div>
       </div>
     </section>

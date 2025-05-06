@@ -1,18 +1,8 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
 import "@/styles/globals.css";
 import Script from "next/script";
 import { Toaster } from "sonner";
-
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
+import { figtree, outfit } from "@/lib/fonts";
 
 export const metadata: Metadata = {
   title: "KL Facilities",
@@ -25,7 +15,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="pt-br">
+    <html lang="pt-BR" className={`${figtree.variable} ${outfit.variable}`}>
       <head>
         {/* Google Analytics */}
         <Script
@@ -70,9 +60,7 @@ export default function RootLayout({
           strategy="afterInteractive"
         />
       </head>
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+      <body className="font-sans">
         {children}
         <Toaster richColors />
 
