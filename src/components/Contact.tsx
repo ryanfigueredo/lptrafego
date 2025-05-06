@@ -1,5 +1,12 @@
 "use client";
 
+declare global {
+  interface Window {
+    fbq?: (...args: any[]) => void;
+    gtag?: (...args: any[]) => void;
+  }
+}
+
 import { motion } from "framer-motion";
 import { toast } from "sonner";
 import { useState } from "react";
@@ -32,6 +39,23 @@ export default function Contact() {
       if (res.ok) {
         toast.success("Contato enviado com sucesso!");
         form.reset();
+
+        // 🔥 Facebook Pixel - Evento Lead
+        if (typeof window !== "undefined" && typeof window.fbq === "function") {
+          window.fbq("track", "Lead");
+        }
+
+        // 📊 Google Analytics 4 - Evento de conversão
+        if (
+          typeof window !== "undefined" &&
+          typeof window.gtag === "function"
+        ) {
+          window.gtag("event", "generate_lead", {
+            event_category: "Formulário",
+            event_label: "Contato enviado",
+            value: 1,
+          });
+        }
       } else {
         toast.error("Erro ao enviar o contato.");
       }
