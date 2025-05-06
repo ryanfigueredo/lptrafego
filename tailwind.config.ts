@@ -1,4 +1,3 @@
-// tailwind.config.ts
 import type { Config } from "tailwindcss";
 
 const config: Config = {
@@ -6,8 +5,8 @@ const config: Config = {
   theme: {
     extend: {
       fontFamily: {
-        sans: ["var(--font-figtree)"],
-        display: ["var(--font-outfit)"],
+        sans: ["var(--font-figtree)", "sans-serif"],
+        display: ["var(--font-outfit)", "sans-serif"],
       },
     },
   },
