@@ -30,7 +30,7 @@ export default function Testimonials() {
         O que dizem nossos clientes
       </motion.h2>
 
-      <div className="mt-10 grid gap-8 md:grid-cols-2 max-w-5xl mx-auto">
+      <div className="mt-10 grid gap-8 md:grid-cols-3 max-w-5xl mx-auto">
         {testimonials.map((item, idx) => (
           <motion.div
             key={idx}
