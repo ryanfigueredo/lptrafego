@@ -48,6 +48,14 @@ export function Header() {
                 >
                   Sobre nós
                 </Link>
+
+                <Link
+                  href="/o-grupo/historia"
+                  className="block px-4 py-2 hover:bg-gray-100"
+                  onClick={() => setOpenDropdown(false)}
+                >
+                  Nossa História
+                </Link>
                 <Link
                   href="/o-grupo/responsabilidade"
                   className="block px-4 py-2 hover:bg-gray-100"

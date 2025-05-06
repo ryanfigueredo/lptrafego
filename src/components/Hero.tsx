@@ -14,13 +14,13 @@ const ReactPlayer = dynamic(() => import("react-player/lazy"), { ssr: false });
 
 export default function Hero() {
   return (
-    <section className="bg-[#f5f8ef] px-6 py-16 md:py-24 text-center">
+    <section className="bg-[#f8faf7] px-6 py-16 md:py-24 text-center">
       <div className="max-w-5xl mx-auto">
         <motion.h1
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7 }}
-          className="text-4xl md:text-5xl font-extrabold text-[#3A5311] leading-tight"
+          className="text-4xl md:text-5xl font-extrabold text-[#2f4e1c] leading-tight"
         >
           Excelência em Limpeza Profissional e Facilities Operacionais
         </motion.h1>
@@ -29,7 +29,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.3 }}
-          className="mt-6 text-lg md:text-xl text-gray-700"
+          className="mt-6 text-lg md:text-xl text-[#374151]"
         >
           Mais de 60 contratos ativos. Atendimento em atacadistas e centros
           comerciais em todo o Brasil.
@@ -43,7 +43,7 @@ export default function Hero() {
         >
           <Link
             href="#contato"
-            className="bg-[#3A5311] text-white px-6 py-3 rounded-xl font-medium hover:bg-[#2c3d0d] transition"
+            className="bg-[#6c9b3b] text-white px-6 py-3 rounded-xl font-medium hover:bg-[#2f4e1c] transition"
           >
             Solicite uma Proposta
           </Link>
@@ -58,7 +58,7 @@ export default function Hero() {
                 window.fbq("track", "Contact");
               }
             }}
-            className="border border-[#3A5311] text-[#3A5311] px-6 py-3 rounded-xl font-medium hover:bg-[#e4ead8] transition"
+            className="border border-[#6c9b3b] text-[#2f4e1c] px-6 py-3 rounded-xl font-medium hover:bg-[#e9f0e3] transition"
           >
             Falar no WhatsApp
           </a>
@@ -69,7 +69,7 @@ export default function Hero() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.8, delay: 0.7 }}
-          className="mt-10 aspect-video rounded-xl overflow-hidden shadow-lg"
+          className="mt-24 aspect-video rounded-xl overflow-hidden shadow-lg"
         >
           <ReactPlayer
             url="/videos/institucional-kl.mp4"
@@ -78,8 +78,8 @@ export default function Hero() {
             playing={true}
             muted={true}
             controls={true}
-            style={{ objectFit: "cover" }}
             playsinline
+            style={{ objectFit: "cover" }}
             config={{
               file: {
                 attributes: {
