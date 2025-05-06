@@ -36,7 +36,7 @@ export function Header() {
               onClick={() => setOpenDropdown(!openDropdown)}
               className="flex items-center gap-1 hover:text-[#3A5311] focus:outline-none"
             >
-              O Grupo
+              A holding
               <ChevronDown size={14} />
             </button>
             {openDropdown && (

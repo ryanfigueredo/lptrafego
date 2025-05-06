@@ -4,12 +4,16 @@ import { motion } from "framer-motion";
 
 const testimonials = [
   {
-    name: "Síndico João Carlos",
-    text: "A KL Facilities revolucionou a gestão do nosso condomínio. Equipe ágil, custo sob controle e zero dor de cabeça.",
+    name: "Luiz Vladimir, Mix Mateus",
+    text: "A KL Facilities sempre faz um ótimo trabalho. O ambiente fica impecável e a equipe é super profissional.",
   },
   {
-    name: "Síndica Maria Luiza",
-    text: "Serviço de limpeza impecável, equipe bem treinada e atendimento sempre rápido. Recomendo para qualquer condomínio.",
+    name: "Natally Bueno, Spani Atacadista.",
+    text: "O serviço da KL Facilities faz toda a diferença no nosso dia a dia. O ambiente fica limpo e agradável, e após as lavagens noturnas, conseguimos melhorar ainda mais a experiência dos nossos clientes.",
+  },
+  {
+    name: "Bruno Oliveira, Giga Atacado.",
+    text: "Gostei muito do serviço da KL Facilities. Sempre que precisamos eles resolvem tudo de forma rápida e eficiente.",
   },
 ];
 
